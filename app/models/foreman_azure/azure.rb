@@ -10,6 +10,10 @@ module ForemanAzure
       "#{name} (#{provider_friendly_name})"
     end
 
+    def capabilities
+      [:image]
+    end
+
     def self.model_name
       ComputeResource.model_name
     end
@@ -21,6 +25,20 @@ module ForemanAzure
     def test_connection(options = {})
       client.storage_accounts # Make a simple 'ping' request
       super(options)
+    end
+
+    def available_images
+      client.images
+    end
+
+    def locations
+      []
+    end
+
+    def create_vm(args = {})
+      args[:vm_name] = args[:name]
+      args[:vm_user] = Image.find_by_uuid(args[:image]).username
+      super(args)
     end
 
     protected
