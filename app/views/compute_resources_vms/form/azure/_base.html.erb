@@ -13,5 +13,8 @@ images = possible_images(compute_resource, arch, os) %>
                                                              _('Please select an image')},
     {:disabled => images.empty?,
      :label => _('Image'),
+     :onchange => 'image_selected(this);',
+     :'data-url' => method_path('image_selected'),
+     :required => true,
      :label_size => "col-md-2"} %>
 </div>

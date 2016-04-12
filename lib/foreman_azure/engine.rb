@@ -25,6 +25,9 @@ module ForemanAzure
       require File.expand_path(
         '../../../app/models/concerns/fog_extensions/azure/image', __FILE__)
       Fog::Compute::Azure::Image.send(:include, FogExtensions::Azure::Image)
+
+      ::HostsController.send :include,
+        ForemanAzure::Concerns::HostsControllerExtensions
     end
   end
 end
