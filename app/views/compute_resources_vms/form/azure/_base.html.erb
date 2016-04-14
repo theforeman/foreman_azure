@@ -9,12 +9,33 @@ images = possible_images(compute_resource, arch, os) %>
 
 <div id='image_selection'>
   <%= select_f f, :image, images, :uuid, :name,
-    {:include_blank => (images.empty? || images.size == 1) ? false :
-                                                             _('Please select an image')},
-    {:disabled => images.empty?,
-     :label => _('Image'),
-     :onchange => 'image_selected(this);',
-     :'data-url' => method_path('image_selected'),
-     :required => true,
-     :label_size => "col-md-2"} %>
+    { :include_blank => (images.empty? || images.size == 1) ? false : _('Please select an image') },
+    { :disabled => images.empty?,
+      :label => _('Image'),
+      :onchange => 'image_selected(this);',
+      :'data-url' => method_path('image_selected'),
+      :required => true,
+      :label_size => "col-md-2" } %>
 </div>
+
+<script id='image_selected_script' async>
+function image_selected(image) {
+  var url = $(element).attr('data-url');
+  var imageId = $(element).val();
+  foreman.tools.showSpinner();
+  $.ajax({
+    data: attrs,
+    type:'get',
+    url: url,
+    complete: function(){
+      reloadOnAjaxComplete(element);
+    },
+    error: function(request, status, error) {
+      alert('not successful');
+    },
+    success: function(request) {
+      alert('successful');
+    }
+  });
+}
+</script>

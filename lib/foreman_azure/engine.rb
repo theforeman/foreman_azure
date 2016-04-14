@@ -15,6 +15,15 @@ module ForemanAzure
       Foreman::Gettext::Support.add_text_domain locale_domain, locale_dir
     end
 
+    initializer 'foreman_azure.assets.precompile' do |app|
+      app.config.assets.precompile += ['foreman_azure/host_os_azure_selected.js']
+    end
+
+    initializer 'foreman_azure.configure_assets', :group => :assets do
+      SETTING[:foreman_azure] =
+        { :assets => { :precompile => ['foreman_azure/host_os_azure_selected.js'] } }
+    end
+
     config.to_prepare do
       require 'fog/azure'
       require 'fog/azure/models/compute/servers'
