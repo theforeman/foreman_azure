@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :hosts do
-    collection do
-      get 'image_selected'
-    end
+  scope :azure, :path => '/azure' do
+    get :locations, :controller =>:hosts
   end
 end

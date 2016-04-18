@@ -1,3 +1,5 @@
+require 'deface'
+
 module ForemanAzure
   class Engine < ::Rails::Engine
     engine_name 'foreman_azure'
@@ -16,7 +18,7 @@ module ForemanAzure
     end
 
     initializer 'foreman_azure.assets.precompile' do |app|
-      app.config.assets.precompile += ['foreman_azure/host_os_azure_selected.js']
+      app.config.assets.precompile += %w(foreman_azure/host_os_azure_selected.js)
     end
 
     initializer 'foreman_azure.configure_assets', :group => :assets do

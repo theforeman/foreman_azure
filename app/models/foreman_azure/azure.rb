@@ -31,13 +31,15 @@ module ForemanAzure
       client.images
     end
 
-    def locations
-      []
+    def locations(image_id)
+      client.images.get(image_id).locations.split(';')
     end
 
     def create_vm(args = {})
       args[:vm_name] = args[:name]
       args[:vm_user] = Image.find_by_uuid(args[:image]).username
+      args[:private_key_file] = self.url
+      args[:location] = args[:location]
       super(args)
     end
 
