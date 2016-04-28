@@ -31,7 +31,7 @@ module ForemanAzure
       client.images
     end
 
-    def locations(image_id)
+    def image_locations(image_id)
       client.images.get(image_id).locations.split(';')
     end
 
@@ -51,5 +51,9 @@ module ForemanAzure
         :azure_sub_id => subscription_id,
         :azure_pem => certificate_path)
     end
+
+    # Azure does not have an UUID for each vm. It has a unique pair
+    # 'cloud_service_name' and 'vm_name'. We will need to override all
+    # destroy_vm, start_vm, stop_vm... to accept two parameters.
   end
 end
