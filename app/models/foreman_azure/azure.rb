@@ -43,6 +43,17 @@ module ForemanAzure
       super(args)
     end
 
+    # Azure does not have an UUID for each vm. It has a unique pair
+    # 'cloud_service_name' and 'vm_name'. We will need to override all
+    # destroy_vm, start_vm, stop_vm... to accept two parameters.
+    #
+    # fog-azure should probably build this UUID concept instead,
+    # but until then, we can just do our best to match it
+
+    def find_vm_by_uuid(uuid)
+      client.servers.find { |vm| vm.vm_name == uuid }
+    end
+
     protected
 
     def client
@@ -51,9 +62,5 @@ module ForemanAzure
         :azure_sub_id => subscription_id,
         :azure_pem => certificate_path)
     end
-
-    # Azure does not have an UUID for each vm. It has a unique pair
-    # 'cloud_service_name' and 'vm_name'. We will need to override all
-    # destroy_vm, start_vm, stop_vm... to accept two parameters.
   end
 end

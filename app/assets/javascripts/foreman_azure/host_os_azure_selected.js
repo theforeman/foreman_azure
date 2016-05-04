@@ -1,14 +1,17 @@
-function azure_image_selected(element) {
-  var url = $(element).attr('data-url');
-  var imageId = $(element).val();
-  var azure_locations = $('#azure_locations')
+function azure_image_selected() {
+  var url = $('#host_compute_attributes_image').attr('data-url');
+  var imageId = $('#host_compute_attributes_image').val();
+  var azure_locations = $('#azure_locations');
+  var locations_spinner = $('#azure_locations_spinner');
   foreman.tools.showSpinner();
+  locations_spinner.removeClass('hide');
   $.ajax({
     data: { "image_id": imageId },
     type:'get',
     url: url,
     complete: function(){
-      reloadOnAjaxComplete(element);
+      reloadOnAjaxComplete('#host_compute_attributes_image');
+      locations_spinner.addClass('hide');
     },
     error: function(request, status, error) {
     },

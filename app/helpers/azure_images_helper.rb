@@ -11,16 +11,32 @@ module AzureImagesHelper
         :disabled => images.empty?,
         :class => 'without_select2',
         :'data-url' => '/azure/locations',
-        :onclick => 'azure_image_selected(this);',
-        :onchange => 'azure_image_selected(this);' } )
+        :onclick => 'azure_image_selected();',
+        :onchange => 'azure_image_selected();' } )
   end
 
   def select_azure_region(f)
     selectable_f f,
       :location, [],
       { :include_blank => _('Choose an operating system and image first') },
-      { :label => _('Location'),
+      { :label => _('Azure location'),
         :class => 'without_select2',
-        :id => 'azure_locations' }
+        :id => 'azure_locations',
+        :help_inline => refresh_button + spinner_indicator }
+  end
+
+  private
+
+  def spinner_indicator
+    content_tag(:span,
+                content_tag(:div, '',
+                            :id => 'azure_locations_spinner',
+                            :class => 'hide spinner spinner-xs'),
+                :class => 'help-block').html_safe
+  end
+
+  def refresh_button
+    link_to_function(icon_text('refresh', ''),
+                     'azure_image_selected();')
   end
 end
