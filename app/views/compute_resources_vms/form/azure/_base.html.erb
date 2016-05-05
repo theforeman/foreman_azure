@@ -1,14 +1,10 @@
-<%= select_azure_region(f) %>
-
-<!-- TODOs -->
-<!-- Storage accounts -->
-<!-- Availability set -->
-<!-- SSH port -->
-<!-- TCP endpoints -->
-<!-- UDP endpoints -->
-<!-- Size -->
+<!-- Size (choose location first) -->
 <!-- Cloud service name, include_blank => default to VM name -->
 <!-- Subnet? -->
+
+<%= select_azure_region(f) %>
+<%= select_storage_account(f, compute_resource.storage_accounts) %>
+<%= select_role_size(f, compute_resource.role_sizes) %>
 
 <% arch ||= nil ; os ||= nil
 images = possible_images(compute_resource, arch, os) %>

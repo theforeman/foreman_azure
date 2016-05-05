@@ -25,6 +25,20 @@ module AzureImagesHelper
         :help_inline => refresh_button + spinner_indicator }
   end
 
+  def select_storage_account(f, accounts)
+    selectable_f f,
+      :storage_account_name, accounts.map(&:name),
+      { :include_blank => _('None') },
+      { :label => _('Storage account') }
+  end
+
+  def select_role_size(f, role_sizes)
+    selectable_f f,
+      :vm_size, role_sizes,
+      {},
+      { :label => _('Role size') }
+  end
+
   private
 
   def spinner_indicator

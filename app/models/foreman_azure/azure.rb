@@ -35,6 +35,10 @@ module ForemanAzure
       client.images.get(image_id).locations.split(';')
     end
 
+    def role_sizes
+      client.list_role_sizes
+    end
+
     def create_vm(args = {})
       args[:hostname] = args[:name]
       args[:vm_name] = args[:name].split('.').first
@@ -52,6 +56,14 @@ module ForemanAzure
 
     def find_vm_by_uuid(uuid)
       client.servers.find { |vm| vm.vm_name == uuid }
+    end
+
+    def storage_accounts
+      client.storage_accounts
+    end
+
+    def images
+      client.images
     end
 
     protected
