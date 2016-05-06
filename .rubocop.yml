@@ -8,6 +8,12 @@ AllCops:
 Style/Documentation:
   Enabled: false
 
+Style/HashSyntax:
+  Enabled: false
+  SupportedStyles:
+    - ruby19
+    - hash_rockets
+
 # Force before_filter until upgrade to Rails 4
 Rails/ActionFilter:
   EnforcedStyle: filter

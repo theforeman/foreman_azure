@@ -6,8 +6,7 @@ module ForemanAzure
 
     before_create :test_connection
 
-    delegate :images, :storage_accounts, :role_sizes, :cloud_services,
-      :to => :client
+    delegate :storage_accounts, :role_sizes, :cloud_services, :to => :client
 
     def to_label
       "#{name} (#{provider_friendly_name})"
@@ -41,8 +40,9 @@ module ForemanAzure
     def create_vm(args = {})
       args[:hostname] = args[:name]
       args[:vm_name] = args[:name].split('.').first
+      args[:cloud_service_name] ||= args[:vm_name]
       args[:vm_user] = Image.find_by_uuid(args[:image]).username
-      args[:private_key_file] = self.url
+      args[:private_key_file] = url
       super(args)
     end
 

@@ -2,8 +2,6 @@
 
 Integration between [Microsoft Azure](http://azure.com/) and [Foreman](http://theforeman.org/)
 
-*Not ready for production yet - please use at your own risk & report any failures :)*
-
 ## Installation
 
 See [How_to_Install_a_Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Install_a_Plugin)
@@ -26,6 +24,14 @@ To create the .cer file, execute the following command:
     openssl x509 -inform pem -in /etc/foreman/azure.pem -outform der -out /etc/foreman/azure.cer
 
 After creating these files, the .cer file will need to be uploaded to Azure via the "Upload a Management Certificate" action of the "Management Certificates" tab within the "Settings" section of the management portal.
+
+## Pending
+
+* foreman-installer support
+* listing in theforeman.org
+* improve documentation
+* packaging
+* move to github.com/theforeman
 
 ## Copyright
 
