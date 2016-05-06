@@ -39,6 +39,13 @@ module AzureImagesHelper
       { :label => _('Role size') }
   end
 
+  def select_cloud_service(f, cloud_services)
+    selectable_f f,
+      :cloud_service_name, cloud_services.map(&:name),
+      { :include_blank => _('Defaults to VM name') },
+      { :label => _('Cloud service name') }
+  end
+
   private
 
   def spinner_indicator
