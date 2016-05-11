@@ -1,0 +1,33 @@
+2016-05-06	Daniel Lobato <elobatocs@gmail.com>
+	* Fix rubocop errors
+	* Set service_cloud_name on vm
+
+2016-05-05	Daniel Lobato <elobatocs@gmail.com>
+	* Add options to set storage account and VM size
+
+2016-05-04	Daniel Lobato <elobatocs@gmail.com>
+	* Give more hints to the user to load locations
+	* Fix 'power off' button
+
+2016-04-28	Daniel Lobato <elobatocs@gmail.com>
+	* Display list of vms in Compute Resource
+
+2016-04-20	Daniel Lobato <elobatocs@gmail.com>
+	* Set hostname and vm_name at creation time
+
+2016-04-18	Daniel Lobato <elobatocs@gmail.com>
+	* Load Azure locations after clicking on OS Image
+
+2016-04-14	Daniel Lobato <elobatocs@gmail.com>
+	* image_selected partial to load location
+
+2016-04-12	Daniel Lobato <elobatocs@gmail.com>
+	* Route to load Azure locations from image via AJAX
+	* Creation and selection of images support
+
+2016-04-08	Daniel Lobato <elobatocs@gmail.com>
+	* Azure compute resource creation form
+
+2016-04-05	Daniel Lobato <elobatocs@gmail.com>
+	* Initial commit
+
