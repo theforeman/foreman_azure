@@ -22,7 +22,7 @@ module ForemanAzure
     end
 
     initializer 'foreman_azure.configure_assets', :group => :assets do
-      SETTING[:foreman_azure] =
+      SETTINGS[:foreman_azure] =
         { :assets => { :precompile => ['foreman_azure/host_os_azure_selected.js'] } }
     end
 
