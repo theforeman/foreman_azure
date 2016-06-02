@@ -1,3 +1,9 @@
+2016-06-02	Daniel Lobato <elobatocs@gmail.com>
+	* Fix SETTING SETTINGS typo in engine
+
+2016-05-11	Daniel Lobato <elobatocs@gmail.com>
+	* Release 1.0
+
 2016-05-06	Daniel Lobato <elobatocs@gmail.com>
 	* Fix rubocop errors
 	* Set service_cloud_name on vm
