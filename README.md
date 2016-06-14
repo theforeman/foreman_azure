@@ -1,10 +1,24 @@
+[![Code Climate](https://codeclimate.com/github/theforeman/foreman_azure/badges/gpa.svg)](https://codeclimate.com/github/theforeman/foreman_azure)
+[![Gem Version](https://badge.fury.io/rb/foreman_azure.svg)](https://badge.fury.io/rb/foreman_azure)
+[![GPL License](https://img.shields.io/github/license/theforeman/foreman_azure.svg)](https://github.com/theforeman/foreman_azure/blob/master/LICENSE)
+
 # Foreman Azure
 
-Integration between [Microsoft Azure](http://azure.com/) and [Foreman](http://theforeman.org/)
+[Microsoft Azure](http://azure.com/) compute resource for [Foreman](http://theforeman.org/)
+
+* Website: [theforeman.org](http://theforeman.org)
+* ServerFault tag: [Foreman](http://serverfault.com/questions/tagged/foreman)
+* Issues: [foreman Redmine](http://projects.theforeman.org/projects/foreman/issues)
+* Wiki: [Foreman wiki](http://projects.theforeman.org/projects/foreman/wiki/About)
+* Community and support: [#theforeman](https://kiwiirc.com/client/irc.freenode.net/?#theforeman) for general support, [#theforeman-dev](https://kiwiirc.com/client/irc.freenode.net/?#theforeman-dev) for development chat in [Freenode](irc.freenode.net)
+* Mailing lists:
+    * [foreman-users](https://groups.google.com/forum/?fromgroups#!forum/foreman-users)
+    * [foreman-dev](https://groups.google.com/forum/?fromgroups#!forum/foreman-dev)
+
 
 ## Installation
 
-See [How_to_Install_a_Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Install_a_Plugin)
+See [the Foreman manual](https://theforeman.org/plugins/#2.2Packageinstallation)
 for how to install Foreman plugins
 
 ## Configuration
@@ -28,10 +42,7 @@ After creating these files, the .cer file will need to be uploaded to Azure via 
 ## Pending
 
 * foreman-installer support
-* listing in theforeman.org
 * improve documentation
-* packaging
-* move to github.com/theforeman
 
 ## Copyright
 
