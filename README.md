@@ -18,12 +18,25 @@
 
 ## Installation
 
-See [the Foreman manual](https://theforeman.org/plugins/#2.2Packageinstallation)
-for how to install Foreman plugins
+See [the Foreman manual](https://theforeman.org/plugins/#2.2Packageinstallation).
+
+## Usage
+
+Same as any other compute resource, provide your credentials:
+
+![Azure credentials](http://i.imgur.com/4uOVa2W.png)
+
+Then associate your Foreman operating system with an image on Azure:
+
+![Azure image](http://i.imgur.com/KcnVgi0.png)
+
+And you'll be able to create hosts in Azure with that image and many other options, via Foreman. This will allow you to proactively manage your hosts DHCP/DNS, configuration management, parameters, run scripts via remote execution and more!
+
+![Azure options on new host](http://i.imgur.com/iZdLCqs.png)
 
 ## Configuration
 
-When you create the compute resource, you need to provide your subscription ID, a path to the .pem certificate, and a URL to your Azure API
+When you create the compute resource, you need to provide your subscription ID, a path to the .pem certificate, and a URL to your Azure API. Read below how to create the certificate needed.
 
 ### Certificate creation
 
@@ -37,12 +50,10 @@ To create the .cer file, execute the following command:
 
     openssl x509 -inform pem -in /etc/foreman/azure.pem -outform der -out /etc/foreman/azure.cer
 
-After creating these files, the .cer file will need to be uploaded to Azure via the "Upload a Management Certificate" action of the "Management Certificates" tab within the "Settings" section of the management portal.
+After creating these files, the .cer file will need to be uploaded to Azure via the "Upload a Management Certificate" action of the "Management Certificates" tab within the "Settings" section of the classic management portal. Read how to upload the certificate on the [Azure official documentation](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/).
 
-## Pending
+![Management certificate upload](http://i.imgur.com/wy6AfG6.png)
 
-* foreman-installer support
-* improve documentation
 
 ## Copyright
 
