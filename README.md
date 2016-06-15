@@ -18,7 +18,35 @@
 
 ## Installation
 
-See [the Foreman manual](https://theforeman.org/plugins/#2.2Packageinstallation).
+See [the Foreman manual](https://theforeman.org/plugins/#2.2Packageinstallation). foreman-installer support will be available soon.
+
+### Red Hat, CentOS, Scientific Linux (rpm)
+
+Set up the repo as explained in the link above, then run
+
+    # yum install tfm-rubygem-foreman_azure
+
+### Fedora (rpm)
+
+Set up the repo as explained in the link above, then run
+
+    # yum install rubygem-foreman_azure
+
+### Debian, Ubuntu (deb)
+
+Set up the repo as explained in the link above, then run
+
+    # apt-get install ruby-foreman-azure
+
+### Bundle (gem)
+
+Add the following to bundler.d/Gemfile.local.rb in your Foreman installation directory (/usr/share/foreman by default)
+
+    $ gem 'foreman_azure'
+
+Then run `bundle install` from the same directory
+
+
 
 ## Usage
 
