@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ['dlobatog@redhat.com']
   s.homepage    = 'https://github.com/theforeman/foreman_azure'
   s.summary     = 'Azure as a Compute Resource of Foreman'
+  s.description = 'Azure as a Compute Resource of Foreman'
   s.files = Dir['{app,config,db,lib,locale}/**/*'] + ['LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
 
