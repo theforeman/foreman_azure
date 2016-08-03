@@ -2,7 +2,6 @@ module ForemanAzure
   class Azure < ComputeResource
     alias_attribute :subscription_id, :user
     alias_attribute :certificate_path, :url
-    attr_accessible :subscription_id, :certificate_path
 
     before_create :test_connection
 
