@@ -2,12 +2,10 @@
 #
 # This file is distributed under the same license as foreman_azure.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-20 08:46+0100\n"
 "PO-Revision-Date: 2014-08-20 08:54+0100\n"
 "Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
 "Language-Team: Foreman Team <foreman-dev@googlegroups.com>\n"
@@ -17,3 +15,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "Action"
+msgstr ""
+
+msgid "Azure as a Compute Resource of Foreman"
+msgstr ""
+
+msgid "Azure location"
+msgstr ""
+
+msgid "Certificate path (.pem)"
+msgstr ""
+
+msgid "Choose an operating system and image first"
+msgstr ""
+
+msgid "Cloud service name"
+msgstr ""
+
+msgid "Defaults to VM name"
+msgstr ""
+
+msgid "Does this image support user data input (e.g. via cloud-init)?"
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Please select an image"
+msgstr ""
+
+msgid "Role size"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Storage account"
+msgstr ""
+
+msgid "Subscription ID"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "The user that is used to ssh into the instance, normally cloud-user, ec2-user, ubuntu, root etc"
+msgstr ""

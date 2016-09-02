@@ -1,19 +1,101 @@
-# foreman_azure
-#
-# This file is distributed under the same license as foreman_azure.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the foreman_azure package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: version 0.0.1\n"
+"Project-Id-Version: foreman_azure 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-20 08:46+0100\n"
-"PO-Revision-Date: 2014-08-20 08:46+0100\n"
-"Last-Translator: Foreman Team <foreman-dev@googlegroups.com>\n"
-"Language-Team: Foreman Team <foreman-dev@googlegroups.com>\n"
+"POT-Creation-Date: 2016-08-26 10:34-0400\n"
+"PO-Revision-Date: 2016-08-26 10:34-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#: ../app/helpers/azure_images_helper.rb:9
+msgid "Please select an image"
+msgstr ""
+
+#: ../app/helpers/azure_images_helper.rb:22
+msgid "Choose an operating system and image first"
+msgstr ""
+
+#: ../app/helpers/azure_images_helper.rb:23
+msgid "Azure location"
+msgstr ""
+
+#: ../app/helpers/azure_images_helper.rb:33
+msgid "None"
+msgstr ""
+
+#: ../app/helpers/azure_images_helper.rb:34
+msgid "Storage account"
+msgstr ""
+
+#: ../app/helpers/azure_images_helper.rb:42
+msgid "Role size"
+msgstr ""
+
+#: ../app/helpers/azure_images_helper.rb:49
+msgid "Defaults to VM name"
+msgstr ""
+
+#: ../app/helpers/azure_images_helper.rb:50
+msgid "Cloud service name"
+msgstr ""
+
+#: ../app/views/compute_resources/form/_azure.html.erb:1
+msgid "Subscription ID"
+msgstr ""
+
+#: ../app/views/compute_resources/form/_azure.html.erb:2
+msgid "Certificate path (.pem)"
+msgstr ""
+
+#: ../app/views/compute_resources/form/_azure.html.erb:4
+msgid "Test Connection"
+msgstr ""
+
+#: ../app/views/compute_resources_vms/index/_azure.html.erb:4
+msgid "Name"
+msgstr ""
+
+#: ../app/views/compute_resources_vms/index/_azure.html.erb:5
+msgid "Image"
+msgstr ""
+
+#: ../app/views/compute_resources_vms/index/_azure.html.erb:6
+msgid "Size"
+msgstr ""
+
+#: ../app/views/compute_resources_vms/index/_azure.html.erb:7
+msgid "Location"
+msgstr ""
+
+#: ../app/views/compute_resources_vms/index/_azure.html.erb:8
+msgid "State"
+msgstr ""
+
+#: ../app/views/compute_resources_vms/index/_azure.html.erb:9
+msgid "Action"
+msgstr ""
+
+#: ../app/views/images/form/_azure.html.erb:4
+msgid ""
+"The user that is used to ssh into the instance, normally cloud-user, ec2-user,"
+" ubuntu, root etc"
+msgstr ""
+
+#: ../app/views/images/form/_azure.html.erb:6
+msgid "Does this image support user data input (e.g. via cloud-init)?"
+msgstr ""
+
+#: gemspec.rb:2
+msgid "Azure as a Compute Resource of Foreman"
+msgstr ""
