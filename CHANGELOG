@@ -1,4 +1,25 @@
+2016-10-03	Daniel Lobato Garcia <me@daniellobato.me>
+	* Fixes #16758 - Adapt js to new Foreman tools
+
+2016-09-02	Bryan Kearney <bryan.kearney@gmail.com>
+	* Fixes #16337 - Extract the current strings so we can setup transifex (#3)
+
+2016-08-03	Daniel Lobato <elobatocs@gmail.com>
+	* Fixes #15962 - Move to strong_params
+
+2016-06-23	Dominic Cleal <dominic@cleal.org>
+	* Add description to gemspec
+
+2016-06-15	Daniel Lobato <elobatocs@gmail.com>
+	* Add installation basic commands
+	* Add tutorial to README
+
+2016-06-14	Daniel Lobato <elobatocs@gmail.com>
+	* Updated README
+	* Change rubocop cop to be compliant with CodeClimate
+
 2016-06-02	Daniel Lobato <elobatocs@gmail.com>
+	* Release 1.0.1
 	* Fix SETTING SETTINGS typo in engine
 
 2016-05-11	Daniel Lobato <elobatocs@gmail.com>

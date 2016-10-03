@@ -18,7 +18,7 @@
 
 ## Installation
 
-See [the Foreman manual](https://theforeman.org/plugins/#2.2Packageinstallation). foreman-installer support will be available soon.
+See [the Foreman manual](https://theforeman.org/plugins/#2.2Packageinstallation). foreman-installer support is available.
 
 ### Red Hat, CentOS, Scientific Linux (rpm)
 
@@ -45,8 +45,6 @@ Add the following to bundler.d/Gemfile.local.rb in your Foreman installation dir
     $ gem 'foreman_azure'
 
 Then run `bundle install` from the same directory
-
-
 
 ## Usage
 
