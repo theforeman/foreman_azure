@@ -1,0 +1,20 @@
+<% title @vm.name %>
+<div class='col-md-12'>
+  <table class="<%= table_css_classes %>">
+    <thead>
+      <tr><th colspan="2"><%=_('Properties') %></th></tr>
+    </thead>
+    <tbody>
+      <%= prop :vm_name %>
+      <%= prop :ipaddress %>
+      <%= prop :deployment_status, _('Deployment status') %>
+      <%= prop :status %>
+      <%= prop :cloud_service_name, _('Cloud service name') %>
+      <%= prop :disk_name, _('Disk name') %>
+      <%= prop :image %>
+      <%= prop :vm_user %>
+      <%= prop :vm_size %>
+      <%= prop :storage_account_name, _('Storage account name') %>
+    </tbody>
+  </table>
+</div>
