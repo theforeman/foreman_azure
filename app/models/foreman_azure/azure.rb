@@ -37,10 +37,11 @@ module ForemanAzure
     end
 
     def create_vm(args = {})
+      args.delete_if { |_key, value| value.blank? }
       args[:hostname] = args[:name]
       args[:vm_name] = args[:name].split('.').first
       args[:cloud_service_name] ||= args[:vm_name]
-      args[:vm_user] = Image.find_by_uuid(args[:image]).username
+      args[:vm_user] = Image.unscoped.find_by_uuid(args[:image]).username
       args[:private_key_file] = url
       super(args)
     end
