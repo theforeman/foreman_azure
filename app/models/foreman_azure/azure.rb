@@ -32,6 +32,10 @@ module ForemanAzure
       client.images
     end
 
+    def provided_attributes
+      super.merge(:ip => :public_ip_address)
+    end
+
     def image_locations(image_id)
       client.images.get(image_id).locations.split(';')
     end
