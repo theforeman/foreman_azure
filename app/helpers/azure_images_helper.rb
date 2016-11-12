@@ -2,7 +2,7 @@ module AzureImagesHelper
   def select_azure_image(f, images)
     select_f(
       f,
-      :image,
+      :image_id,
       images,
       :uuid,
       :name,

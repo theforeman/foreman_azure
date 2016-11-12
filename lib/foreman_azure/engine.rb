@@ -48,6 +48,8 @@ module ForemanAzure
 
       ::HostsController.send :include,
         ForemanAzure::Concerns::HostsControllerExtensions
+      ::Host::Managed.send :include,
+        ForemanAzure::Concerns::SSHProvisionExtensions
     end
   end
 end

@@ -1,6 +1,6 @@
 function azure_image_selected() {
-  var url = $('#host_compute_attributes_image').attr('data-url');
-  var imageId = $('#host_compute_attributes_image').val();
+  var url = $('#host_compute_attributes_image_id').attr('data-url');
+  var imageId = $('#host_compute_attributes_image_id').val();
   var azure_locations = $('#azure_locations');
   var locations_spinner = $('#azure_locations_spinner');
   tfm.tools.showSpinner();
@@ -10,7 +10,7 @@ function azure_image_selected() {
     type:'get',
     url: url,
     complete: function(){
-      reloadOnAjaxComplete('#host_compute_attributes_image');
+      reloadOnAjaxComplete('#host_compute_attributes_image_id');
       locations_spinner.addClass('hide');
       tfm.tools.hideSpinner();
     },

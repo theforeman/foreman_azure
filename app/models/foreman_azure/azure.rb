@@ -45,7 +45,8 @@ module ForemanAzure
       args[:hostname] = args[:name]
       args[:vm_name] = args[:name].split('.').first
       args[:cloud_service_name] ||= args[:vm_name]
-      args[:vm_user] = Image.unscoped.find_by_uuid(args[:image]).username
+      args[:image] = args[:image_id]
+      args[:vm_user] = Image.unscoped.find_by_uuid(args[:image_id]).username
       args[:private_key_file] = url
       super(args)
     end
