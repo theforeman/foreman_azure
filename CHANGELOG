@@ -1,4 +1,15 @@
+2016-11-12	Daniel Lobato García <me@daniellobato.me>
+	* Fixes #17323 - Allow SSH provisioning with CR cert
+
+2016-11-11	Daniel Lobato García <me@daniellobato.me>
+	* Fixes #17321 - Update host IP with vm public IP after prov.
+
+2016-11-10	Daniel Lobato García <me@daniellobato.me>
+	* Fixes #17312 - Show Azure properties in Host#vm tab
+	* Fixes #17043 - Remove empty arguments from API call
+
 2016-10-03	Daniel Lobato Garcia <me@daniellobato.me>
+	* Version 1.0.2
 	* Fixes #16758 - Adapt js to new Foreman tools
 
 2016-09-02	Bryan Kearney <bryan.kearney@gmail.com>
