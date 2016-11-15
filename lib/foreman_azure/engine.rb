@@ -6,9 +6,12 @@ module ForemanAzure
 
     initializer 'foreman_azure.register_plugin', :before => :finisher_hook do
       Foreman::Plugin.register :foreman_azure do
-        requires_foreman '>= 1.8'
+        requires_foreman '>= 1.11'
         compute_resource(Azure)
-        parameter_filter(ComputeResource, :subscription_id, :certificate_path)
+        foreman_version = ::Foreman::Version.new
+        if foreman_version.major.to_i == 1 && foreman_version.minor.to_i >= 13
+          parameter_filter(ComputeResource, :subscription_id, :certificate_path)
+        end
       end
     end
 

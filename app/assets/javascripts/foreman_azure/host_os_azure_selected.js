@@ -3,7 +3,12 @@ function azure_image_selected() {
   var imageId = $('#host_compute_attributes_image_id').val();
   var azure_locations = $('#azure_locations');
   var locations_spinner = $('#azure_locations_spinner');
-  tfm.tools.showSpinner();
+  if (typeof tfm == 'undefined') {  // earlier than 1.13
+    foreman.tools.showSpinner();
+  } else {
+    tfm.tools.showSpinner();
+  }
+
   locations_spinner.removeClass('hide');
   $.ajax({
     data: { "image_id": imageId },
@@ -12,7 +17,11 @@ function azure_image_selected() {
     complete: function(){
       reloadOnAjaxComplete('#host_compute_attributes_image_id');
       locations_spinner.addClass('hide');
-      tfm.tools.hideSpinner();
+      if (typeof tfm == 'undefined') {  // earlier than 1.13
+        foreman.tools.hideSpinner();
+      } else {
+        tfm.tools.hideSpinner();
+      }
     },
     error: function(request, status, error) {
     },
