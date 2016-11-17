@@ -6,6 +6,14 @@
 <% arch ||= nil ; os ||= nil
 images = possible_images(compute_resource, arch, os) %>
 
+<% virtual_networks = compute_resource.virtual_networks %>
+<%= selectable_f f, :virtual_network_name,
+  virtual_networks.map(&:name),
+  { :include_blank => virtual_networks.any? ? false : _("No networks") },
+  { :class => "libvirt_nat", :label => _("Virtual Network"),
+    :disabled => !new_host }
+%>
+
 <div id='image_selection'>
   <%= select_azure_image(f, images) %>
 </div>

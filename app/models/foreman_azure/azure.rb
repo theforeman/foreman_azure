@@ -8,7 +8,8 @@ module ForemanAzure
 
     before_create :test_connection
 
-    delegate :storage_accounts, :role_sizes, :cloud_services, :to => :client
+    delegate :storage_accounts, :role_sizes, :cloud_services,
+      :virtual_networks, :to => :client
 
     def to_label
       "#{name} (#{provider_friendly_name})"

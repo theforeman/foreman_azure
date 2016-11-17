@@ -1,3 +1,7 @@
+2016-11-15	Daniel Lobato Garcia <me@daniellobato.me>
+	* Adjustments for 1.12/1.11 compatibility
+	* Release 1.1.0
+
 2016-11-12	Daniel Lobato García <me@daniellobato.me>
 	* Fixes #17323 - Allow SSH provisioning with CR cert
 
