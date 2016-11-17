@@ -1,4 +1,11 @@
+2016-11-17	Daniel Lobato García <me@daniellobato.me>
+	* Fixes #17381 - Allow to select virtual networks
+
+2016-11-17	David Le Corfec <dlecorfec@users.noreply.github.com>
+	* Fix the old strong param bug on foreman 1.13 (#9)
+
 2016-11-15	Daniel Lobato Garcia <me@daniellobato.me>
+	* Release 1.1.1
 	* Adjustments for 1.12/1.11 compatibility
 	* Release 1.1.0
 
