@@ -2,7 +2,7 @@ module ForemanAzure
   class Azure < ComputeResource
     alias_attribute :subscription_id, :user
     alias_attribute :certificate_path, :url
-    if ::Foreman::Version.new.major.to_i == 1 && ::Foreman::Version.new.minor.to_i <= 13
+    if ::Foreman::Version.new.major.to_i == 1 && ::Foreman::Version.new.minor.to_i < 13
       attr_accessible :subscription_id, :certificate_path
     end
 
