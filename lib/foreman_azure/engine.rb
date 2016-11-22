@@ -30,6 +30,12 @@ module ForemanAzure
         { :assets => { :precompile => ['foreman_azure/host_os_azure_selected.js'] } }
     end
 
+    initializer 'foreman_azure.load_app_instance_data' do |app|
+      ForemanAzure::Engine.paths['db/migrate'].existent.each do |path|
+        app.config.paths['db/migrate'] << path
+      end
+    end
+
     config.to_prepare do
       require 'fog/azure'
       require 'fog/azure/models/compute/servers'
