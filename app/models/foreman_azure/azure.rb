@@ -16,7 +16,7 @@ module ForemanAzure
     end
 
     def capabilities
-      [:image]
+      [:build, :image]
     end
 
     def self.model_name
